@@ -1,26 +1,10 @@
-import _ from 'lodash';
-import './style.css';
-import Icon from './assets/icon.png';
-import Data from './data.xml'
-import Notes from './assets/data.csv'
-
+import _ from "lodash";
 
 function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
+  const element = document.createElement("div");
+  element.innerHTML = _.join(["Hello", "webpack"], " ");
 
-    const myIcon = new Image();
-    myIcon.src = Icon;
+  return element;
+}
 
-    element.appendChild(myIcon);
-
-    console.log(Data);
-    console.log(Notes);
-    return element;
-  }
-  
-  document.body.appendChild(component());
+document.body.appendChild(component());
